@@ -38,8 +38,8 @@ Validation and business logic:
 {
     "starShip": {
         "name": "TIE Advanced x1",
-        "model": "Twin Ion Engine Advanced x1",
-        "class": "Starfighter"
+        "class": "Starfighter",
+        "model": "Twin Ion Engine Advanced x1"
     },
     "crew": 342953,
     "isLeiaOnPlanet": true
