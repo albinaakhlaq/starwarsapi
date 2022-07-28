@@ -1,17 +1,15 @@
 package com.alb.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"name","class","model"})
 public class StarShip {
 
     private String name;
-    private String model;
     private String StarshipClass;
+    private String model;
     private String crew;
 
     @JsonProperty("crew")
@@ -36,15 +34,6 @@ public class StarShip {
         this.name = name;
     }
 
-    @JsonProperty("model")
-    public String getModel() {
-        return model;
-    }
-
-    @JsonProperty("model")
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     @JsonProperty("class")
     public String getStarshipClass() {
@@ -54,6 +43,16 @@ public class StarShip {
     @JsonProperty("starship_class")
     public void setStarshipClass(String starshipClass) {
         StarshipClass = starshipClass;
+    }
+
+    @JsonProperty("model")
+    public String getModel() {
+        return model;
+    }
+
+    @JsonProperty("model")
+    public void setModel(String model) {
+        this.model = model;
     }
 
     @Override
